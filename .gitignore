@@ -6,3 +6,7 @@ custom/
 # temp files directories
 cache/
 log/
+
+#hg subrepos manually pulled
+.hg/
+
