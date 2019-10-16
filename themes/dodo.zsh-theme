@@ -141,7 +141,7 @@ prompt_bzr() {
 }
 
 prompt_hg() {
-  hg_prompt=`hg prompt "☿ {rev}@{branch}/{bookmark}{status}{status|unknown}" 2>error`
+  hg_prompt=`hg prompt "☿ {rev}@{branch}/{bookmark}{status}{status|unknown}" 2>/dev/null`
   if [[ $hg_prompt != "" ]]; then
      hg_changes=`echo $hg_prompt | tail -c2`
       if [[ $hg_changes == *"?" ]]; then
